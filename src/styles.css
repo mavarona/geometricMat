@@ -1,2 +1,25 @@
 /* You can add global styles to this file, and also import other style files */
 @import "~@angular/material/prebuilt-themes/indigo-pink.css";
+
+.circle {
+  height: 100px;
+  width: 100px;
+  background-color: blue;
+  border-radius: 50%;
+  display: inline-block;
+}
+
+.square {
+  height: 100px;
+  width: 100px;
+  background-color: orangered;
+  display: inline-block;
+}
+
+.triangle {
+	width: 0;
+	height: 0;
+	border-left: 50px solid transparent;
+	border-right: 50px solid transparent;
+	border-bottom: 100px solid greenyellow;
+}

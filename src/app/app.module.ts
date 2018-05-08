@@ -1,21 +1,28 @@
 
 // Components
 import { AppComponent } from './app.component';
+import { GeometricsComponent } from './geometrics/geometrics.component';
 
 // Modules
 import { BrowserModule } from '@angular/platform-browser';
 import { NgModule } from '@angular/core';
 import { MaterialModule } from './material/material.module';
 
+// Services
+import { GeometricService } from './services/geometric.service';
+
 @NgModule({
   declarations: [
-    AppComponent
+    AppComponent,
+    GeometricsComponent
   ],
   imports: [
     BrowserModule,
     MaterialModule
   ],
-  providers: [],
+  providers: [
+    GeometricService
+  ],
   bootstrap: [AppComponent]
 })
 export class AppModule { }

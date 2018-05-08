@@ -1,0 +1,16 @@
+.geometric-card {
+  max-width: 600px;
+  text-align: center;
+}
+
+.geometric-full-width {
+  width: 100%;
+}
+
+.titleShape {
+  font-weight: bold;
+  font-size: 18px;
+  text-align: center;
+}
+
+.mat-card-header { justify-content: center; }
