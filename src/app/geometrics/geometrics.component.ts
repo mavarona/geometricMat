@@ -17,7 +17,7 @@ export class GeometricsComponent implements OnInit {
 
   @Input() shapeSelected: Geometric;
   @Input() shapeNames: Array<string>;
-  @Output() selectShape: EventEmitter<string>;
+  @Output() selectShape: EventEmitter<string> = new EventEmitter<string>();
 
   constructor() { }
 
@@ -26,9 +26,9 @@ export class GeometricsComponent implements OnInit {
 
   }
 
-  tocado ( event ) {
+  changeShape ( event ) {
 
-    //this.selectShape.emit(event.value);
+    this.selectShape.emit(event.value);
 
   }
 

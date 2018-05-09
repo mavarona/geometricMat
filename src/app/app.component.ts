@@ -15,6 +15,7 @@ export class AppComponent {
 
   shapeSelected: Geometric;
   shapeNames: Array<string>;
+  shapes: Array<Geometric> = new Array<Geometric>();
 
   constructor (
     private _geometricService: GeometricService
@@ -27,6 +28,12 @@ export class AppComponent {
 
     this.shapeSelected = new Geometric('circle', 'circle', '2π * r', 'π2 * r');
     this.shapeNames = this._geometricService.getNameShapes();
+
+  }
+
+  getInfoShape ( shapeName ) {
+
+    this.shapeSelected = this._geometricService.getShape( shapeName );
 
   }
 
