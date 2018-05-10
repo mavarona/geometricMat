@@ -21,3 +21,9 @@
 	border-right: 50px solid transparent;
 	border-bottom: 100px solid greenyellow;
 }
+
+.rectangle {
+  height: 120px;
+  width: 90px;
+  background-color: purple;
+}

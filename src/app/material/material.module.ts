@@ -6,6 +6,7 @@ import {BrowserAnimationsModule} from '@angular/platform-browser/animations';
 
 // Material
 import {
+  MatButtonModule,
   MatCardModule,
   MatFormFieldModule,
   MatIconModule,
@@ -17,6 +18,7 @@ import {
   imports: [
     BrowserAnimationsModule,
     CommonModule,
+    MatButtonModule,
     MatCardModule,
     MatFormFieldModule,
     MatIconModule,
@@ -24,6 +26,7 @@ import {
     MatSelectModule
   ],
   exports: [
+    MatButtonModule,
     MatCardModule,
     MatFormFieldModule,
     MatIconModule,

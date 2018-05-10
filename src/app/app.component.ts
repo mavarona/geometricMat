@@ -13,7 +13,7 @@ import { GeometricService } from './services/geometric.service';
 })
 export class AppComponent {
 
-  shapeSelected: Geometric;
+  shapeSelect: Geometric;
   shapeNames: Array<string>;
   shapes: Array<Geometric> = new Array<Geometric>();
 
@@ -21,19 +21,31 @@ export class AppComponent {
     private _geometricService: GeometricService
    ) {
 
-  }
-
-  // tslint:disable-next-line:use-life-cycle-interface
-  ngOnInit(): void {
-
-    this.shapeSelected = new Geometric('circle', 'circle', '2π * r', 'π2 * r');
+    this.shapeSelect = new Geometric('circle', 'circle', '2π * r', 'π2 * r');
     this.shapeNames = this._geometricService.getNameShapes();
 
   }
 
   getInfoShape ( shapeName ) {
 
-    this.shapeSelected = this._geometricService.getShape( shapeName );
+    const shapeAux: Geometric =  this._geometricService.getShape( shapeName );
+    this.shapeSelect.name = shapeAux.name;
+    this.shapeSelect.area = shapeAux.area;
+    this.shapeSelect.css = shapeAux.css;
+    this.shapeSelect.perimeter = shapeAux.perimeter;
+
+  }
+
+  addNewShape () {
+
+    this._geometricService.containsShape('rectangle')
+                          .then( exist => {
+                            if ( !exist ) {
+                              // this.shapeNames.push('rectangle');
+                              this.shapeNames = [...this.shapeNames, 'rectangle'];
+                              this._geometricService.addNewShape(new Geometric('rectangle', 'rectangle', '2a + 2b', 'a * b'));
+                            }
+                          });
 
   }
 
