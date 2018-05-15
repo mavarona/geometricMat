@@ -18,7 +18,7 @@ import { Geometric } from '../models/geometric';
 export class GeometricsComponent implements OnInit {
 
   @Input() shapeSelected: Geometric;
-  @Input() shapeNames: Array<string>;
+  @Input() shapes: Array<Geometric>;
   @Output() selectShape: EventEmitter<string> = new EventEmitter<string>();
   @Output() addShapeRect: EventEmitter<any> = new EventEmitter<any>();
 

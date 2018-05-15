@@ -10,11 +10,13 @@ import { MaterialModule } from './material/material.module';
 
 // Services
 import { GeometricService } from './services/geometric.service';
+import { NameShapesPipe } from './pipes/name-shapes.pipe';
 
 @NgModule({
   declarations: [
     AppComponent,
-    GeometricsComponent
+    GeometricsComponent,
+    NameShapesPipe
   ],
   imports: [
     BrowserModule,

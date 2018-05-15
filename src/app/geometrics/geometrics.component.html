@@ -3,7 +3,7 @@
     <mat-card-title class='titleShape'>{{ shapeSelected.name }}</mat-card-title>
   </mat-card-header>
    <mat-card-content>
-      <div [ngClass]="{
+      <div [ngClass]= "{
         'circle':shapeSelected.css === 'circle',
         'square':shapeSelected.css === 'square',
         'triangle':shapeSelected.css === 'triangle',
@@ -13,10 +13,10 @@
       <mat-form-field>
           <mat-select placeholder='Shape Geometric'
                       (selectionChange)='changeShape($event)'>
-            <mat-option *ngFor='let shapeName of shapeNames'
-                        [value]='shapeName'
+            <mat-option *ngFor='let shape of shapes'
+                        [value]='shape.name'
                         >
-              {{ shapeName }}
+              {{ shape.name }}
             </mat-option>
           </mat-select>
         </mat-form-field>
@@ -34,4 +34,4 @@
         (click)='addShape()'>
   Add shape Rectangle
 </button>
-<p>Shapes Available: {{ shapeNames }}</p>
+<p>Shapes Available: {{ shapes | nameShapes }}</p>
