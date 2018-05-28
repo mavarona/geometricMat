@@ -46,7 +46,7 @@ export class AppComponent {
                                                        config.SHAPE_RECTANGLE_AREA);
             this._geometricService.addNewShape( newShape );
             // this.shapes = this._geometricService.getShapes();
-             this.shapes = [...this.shapes];
+            this.shapes = [...this.shapes];
           }
         });
 
